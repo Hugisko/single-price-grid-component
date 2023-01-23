@@ -1,0 +1,163 @@
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+:root {
+    --Cyan-cl: hsl(179, 62%, 43%);
+    --Cyan-light: hsla(179, 62%, 43%, 0.733);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+html, body {
+    height: 100%;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: var(--Light-Gray);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    display: grid;
+    place-items: center;
+    min-height: 100%;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 1rem;
+    margin-top: auto;
+    max-width: 700px;
+    border-radius: 8px; 
+    overflow: hidden;
+}
+
+.cards > * {
+    padding: 1.8rem;
+}
+
+h3 ,h4, span {
+    font-weight: 700;
+    color: white;
+}
+
+.card-1 {
+    background-color: white;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.card-1 > h3 {
+    color: var(--Cyan-cl);
+    font-weight: 700;
+}
+
+.card-1 > h4 {
+    color: var(--Bright-Yellow);
+    padding: 1rem 0;
+}
+
+.card-1 > p {
+    color: var(--Grayish-Blue);
+    font-size: .9575rem;
+}
+
+.card-2 {
+    background-color: var(--Cyan-cl);
+    color: white;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: .7rem;
+}
+
+.price > span{
+    color: white;
+    font-size: 2.2rem;
+}
+
+.price{
+    color: var(--Light-Gray);
+}
+
+.card-2 > button {
+    width: 100%;
+    background-color: var(--Bright-Yellow);
+    transition: background-color ease-in-out .3s;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-top: 2rem;
+    text-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-2 > button:is(:hover,:active) {
+    background-color: hsla(71, 85%, 52%, 0.849);
+    cursor: pointer;
+    transition: background-color ease-in-out .3s;
+}
+
+.card-3 {
+    background-color: var(--Cyan-light);
+}
+
+.card-3 > ul {
+    color: var(--Light-Gray);
+    margin-top: 1rem;
+    list-style-type: none;
+}
+
+footer {
+    margin-top: auto;
+}
+
+@media (min-width: 600px){
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cards > * {
+        padding: 2.5rem;
+    }
+ 
+    .card-1 {
+        grid-column: span 2;
+    }
+
+    .card-1 > p {
+        font-size: 1rem;
+        padding-right: 2.5rem;
+    }
+
+}
